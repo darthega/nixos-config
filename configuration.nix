@@ -8,6 +8,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./programs.nix
+    ./users.nix
   ];
 
   # Enable Flakes feature and nix-command
@@ -113,25 +114,6 @@
   # Security
   security = {
     rtkit.enable = true;
-  };
-
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users = {
-    defaultUserShell = pkgs.zsh;
-    users = {
-      dortega = {
-        isNormalUser = true;
-        description = "Daniel Ortega";
-        extraGroups = [ "networkmanager" "wheel" ];
-        shell = pkgs.zsh;
-        packages = with pkgs; [
-          kdePackages.kate
-          vscodium
-          gitkraken
-        ];
-      };
-    };
   };
 
   # Allow unfree packages
