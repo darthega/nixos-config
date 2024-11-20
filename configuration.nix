@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-let
-  luksUUID = "824dcc12-7340-48e3-b742-838a52fbe209";
-in
 {
   imports = [
     # Include the results of the hardware scan.
