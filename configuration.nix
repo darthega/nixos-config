@@ -6,9 +6,11 @@
 {
   imports = [
     # Include the results of the hardware scan.
+    <home-manager/nixos>
     ./hardware-configuration.nix
     ./programs.nix
     ./users.nix
+    ./home-manager.nix
   ];
 
   # Enable Flakes feature and nix-command
