@@ -4,10 +4,9 @@
     
     packages = with pkgs; [
       kdePackages.kate
-      vscodium
       gitkraken
     ];
   };
 
-  programs = import ./programs.nix {};
+  programs = import ./programs.nix pkgs;
 }
