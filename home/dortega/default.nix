@@ -9,4 +9,8 @@
   };
 
   programs = import ./programs.nix pkgs;
+
+  services = {
+    kdeconnect.enable = true;
+  };
 }

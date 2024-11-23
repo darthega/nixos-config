@@ -8,5 +8,8 @@
       # Install zsh.
       enable = true;
     };
+    kdeconnect = {
+      enable = true;
+    };
   }; 
 }
