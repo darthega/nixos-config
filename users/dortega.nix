@@ -1,10 +1,12 @@
 { config, pkgs, ... }: {
-  name = "dortega";
-  isNormalUser = true;
-  description = "Daniel Ortega";
-  extraGroups = [ "networkmanager" "wheel" ];
-  shell = pkgs.zsh;
-  packages = with pkgs; [
-    atomix
-  ];
+  config.users.users.dortega = {
+    name = "dortega";
+    isNormalUser = true;
+    description = "Daniel Ortega";
+    extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
+    packages = with pkgs; [
+      atomix
+    ];
+  };
 }

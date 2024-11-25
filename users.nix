@@ -1,8 +1,9 @@
 { config, lib, pkgs, ... }: {
+  imports = [
+    ./users/dortega.nix
+  ];
+  
   users = {
     defaultUserShell = pkgs.zsh;
-    users = {
-      dortega = import ./users/dortega.nix pkgs;
-    };
   };
 }

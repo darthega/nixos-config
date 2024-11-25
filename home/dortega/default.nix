@@ -1,4 +1,8 @@
 { pkgs, ... }: {
+  imports = [
+    ./programs.nix
+  ];
+
   home = {
     stateVersion = "24.05";
     
@@ -7,8 +11,6 @@
       gitkraken
     ];
   };
-
-  programs = import ./programs.nix pkgs;
 
   services = {
     kdeconnect.enable = true;
