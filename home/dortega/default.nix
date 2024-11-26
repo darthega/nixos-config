@@ -10,6 +10,7 @@
       (nerdfonts.override { fonts = [ "Meslo" ]; })
       kdePackages.kate
       gitkraken
+      brave
     ];
 
     file = {
