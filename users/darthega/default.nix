@@ -11,7 +11,10 @@
     
 
     # Home directory dotfiles
-    file = {};
+    file = {
+      # Have to read file contents otherwise nix will try to execute it
+      ".p10k.zsh".text = builtins.readFile ./dotfiles/p10k.zsh;
+    };
   
     # This value determines the home Manager release that your
     # configuration is compatible with. This helps avoid breakage

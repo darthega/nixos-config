@@ -127,17 +127,14 @@
       isNormalUser = true;
       description = "Daniel Ortega";
       extraGroups = [ "networkmanager" "wheel" ];
-      packages = with pkgs; [
-        kdePackages.kate
-        vscodium
-      #  thunderbird
-      ];
+      shell = pkgs.zsh;
     };
   };
 
   programs = {
     # Install firefox.
     firefox.enable = true;
+    zsh.enable = true;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
