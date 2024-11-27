@@ -107,13 +107,29 @@
       #media-session.enable = true;
     };
 
+    # blueman (bluetooth)
+    blueman = {
+      enable = true;
+    };
     # Enable OpenSSH daemon.
     # openssh.enable = true;
   };
 
-  # Enable sound with pipewire.
+  # Hardware
   hardware = {
+    # Enable sound with pipewire.
     pulseaudio.enable = false;
+    # Enable bluethoot.
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+          Enable = "Source,Sink,Media,Socket";
+          Experimental = true;
+        };
+      };
+    };
   };
 
   # Security
