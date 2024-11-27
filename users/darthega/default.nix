@@ -1,15 +1,14 @@
 { config, pkgs, ... }:
 {
+  imports = [
+    ./programs.nix
+    ./packages.nix
+  ];
+
   home = {
     username = "darthega";
     homeDirectory = "/home/darthega";
     
-    # PAckages to install for the user
-    packages = with pkgs; [
-      vscodium
-      gitkraken
-      kdePackages.kate
-    ];
 
     # Home directory dotfiles
     file = {};
@@ -23,16 +22,5 @@
     # the home Manager release notes for a list of state version
     # changes in each release.
     stateVersion = "24.11";
-  };
-
-  programs = {
-    # Let home Manager install and manage itself.
-    home-manager.enable = true;
-
-    git = {
-      enable = true;
-      userName = "darthega";
-      userEmail = "darthega@gmail.com";
-    };
   };
 }

@@ -2,6 +2,6 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./users/darthega.nix
+    ./users/darthega
   ];
 }
