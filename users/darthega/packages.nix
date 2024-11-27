@@ -5,5 +5,6 @@
     vscodium
     gitkraken
     kdePackages.kate
+    orca-slicer
   ];
 }
