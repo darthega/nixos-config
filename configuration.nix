@@ -11,6 +11,14 @@
     ./hardware-configuration.nix
   ];
 
+  # Nix
+  nix = {
+    settings={
+      # Enable flakes
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+  };
+
   # Bootloader.
   boot = {
     loader = {
