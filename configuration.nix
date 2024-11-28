@@ -41,10 +41,10 @@
     # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Open ports in the firewall.
-    # firewall.allowedTCPPorts = [ ... ];
-    # firewall.allowedUDPPorts = [ ... ];
-    # Or disable the firewall altogether.
-    # firewall.enable = false;
+    firewall = rec {
+      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+      allowedUDPPortRanges = allowedTCPPortRanges;
+    };
   };
 
   # Time
@@ -151,6 +151,7 @@
     # Install firefox.
     firefox.enable = true;
     zsh.enable = true;
+    kdeconnect.enable = true;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.

@@ -5,6 +5,10 @@
     ./packages.nix
   ];
 
+  services = {
+    kdeconnect.enable = true;
+  };
+
   home = {
     username = "darthega";
     homeDirectory = "/home/darthega";
