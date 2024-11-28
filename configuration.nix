@@ -107,10 +107,6 @@
       #media-session.enable = true;
     };
 
-    # blueman (bluetooth)
-    blueman = {
-      enable = true;
-    };
     # Enable OpenSSH daemon.
     # openssh.enable = true;
   };
